@@ -7,11 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Person.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Person *p = [Person new];
+        [p setName:@"Angelica Schuyler"];
+        [p setAge:24];
+        
+        [p addInterest:@"Reading books"];
+        [p addInterest:@"Letter writing"];
+        [p addInterest:@"Including women in the sequel"];
+        
+        NSLog(@"%@", p);
     }
     return 0;
 }

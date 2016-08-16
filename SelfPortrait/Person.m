@@ -11,7 +11,7 @@
 @implementation Person
 
 - (NSString *)description {
-    return NULL;
+    return [NSString stringWithFormat:@"Hello, it's a pleasure to meet you. My name is %@ and I'm %@ years old. I like eating %@, and my interests include: %@", [self name], @([self age]), [self favoriteFood], [self interests]];
 }
 
 - (NSString *)name {
@@ -31,6 +31,11 @@
 }
 
 - (NSString *)favoriteFood {
+    
+    if (_favoriteFood == NULL) {
+        _favoriteFood = @"macarons";
+    }
+    
     return _favoriteFood;
 }
 
@@ -49,7 +54,7 @@
 }
 
 - (void)ensureInterestsNotNull {
-    if ([_interests isEqual: NULL]) {
+    if (_interests == NULL) {
         _interests = [NSMutableArray array];
     }
 }
