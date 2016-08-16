@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		74C8FFE71D638E8B002D1B34 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C8FFE61D638E8B002D1B34 /* main.m */; };
 		74C8FFEF1D638F2A002D1B34 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C8FFEE1D638F2A002D1B34 /* Person.m */; };
+		74C8FFF21D63B48D002D1B34 /* Input.m in Sources */ = {isa = PBXBuildFile; fileRef = 74C8FFF11D63B48D002D1B34 /* Input.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		74C8FFE61D638E8B002D1B34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		74C8FFED1D638F2A002D1B34 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		74C8FFEE1D638F2A002D1B34 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		74C8FFF01D63B48D002D1B34 /* Input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Input.h; sourceTree = "<group>"; };
+		74C8FFF11D63B48D002D1B34 /* Input.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Input.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				74C8FFE61D638E8B002D1B34 /* main.m */,
 				74C8FFED1D638F2A002D1B34 /* Person.h */,
 				74C8FFEE1D638F2A002D1B34 /* Person.m */,
+				74C8FFF01D63B48D002D1B34 /* Input.h */,
+				74C8FFF11D63B48D002D1B34 /* Input.m */,
 			);
 			path = SelfPortrait;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74C8FFF21D63B48D002D1B34 /* Input.m in Sources */,
 				74C8FFEF1D638F2A002D1B34 /* Person.m in Sources */,
 				74C8FFE71D638E8B002D1B34 /* main.m in Sources */,
 			);
