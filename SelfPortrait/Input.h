@@ -10,8 +10,8 @@
 
 @interface Input : NSObject
 
-BOOL getStringFromUser(char name[], int nameLength);
+NSString* getStringFromUser(int strLength, NSString *prompt);
 
-NSInteger getNumberFromUser(int maxValidChoice);
+NSInteger getNumberFromUser(int maxValidChoice, NSString *prompt);
 
 @end

@@ -8,16 +8,27 @@
 
 #import <Foundation/Foundation.h>
 #import "Person.h"
+#import "Input.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        Person *p = [Person new];
-        [p setName:@"Angelica Schuyler"];
-        [p setAge:24];
         
-        [p addInterest:@"Reading books"];
-        [p addInterest:@"Letter writing"];
-        [p addInterest:@"Including women in the sequel"];
+        BOOL addingInterests = YES;
+        Person *p = [Person new];
+        
+        [p setName:getStringFromUser(30, @"What's your name? 30 characters or less, please.")];
+        [p setAge:getNumberFromUser(150, @"What's your age? I won't believe you if you say you're older than 150.")];
+        
+        while (addingInterests) {
+            
+            for (int i = 0; i < 3; i++) {
+                [p addInterest:getStringFromUser(30, @"Enter a hobby, passion, or interest.")];
+            }
+            
+            if (getNumberFromUser(1, @"Are you done addding things? Enter 0 for yes, 1 for no.") == 0) {
+                addingInterests = NO;
+            }
+        }
         
         NSLog(@"%@", p);
     }

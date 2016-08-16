@@ -10,29 +10,31 @@
 
 @implementation Input
 
-BOOL getStringFromUser(char name[], int nameLength) {
+NSString* getStringFromUser(int strLength, NSString *prompt) {
     char *result = NULL;
+    char* str = malloc(sizeof(char) * strLength);
     
-    while (result != name) {
+    while (result != str || ([@(str) length] <= 1 || [@(str) length] > strLength)) {
+        NSLog(@"%@", prompt);
         fpurge(stdin);
-        result = fgets(name, nameLength, stdin);
+        result = fgets(str, strLength, stdin);
     }
     
-    return YES;
+    return @(str);
 }
 
-NSInteger getNumberFromUser(int maxValidChoice) {
-    NSInteger choice = 0;
+NSInteger getNumberFromUser(int maxValidChoice, NSString *prompt) {
+    NSInteger choice = -1;
     int numberOfItemsScanned = 0;
-    int firstValidChoice = 0;
+    NSInteger minValidChoice = 0;
     
-    fpurge(stdin);
-    numberOfItemsScanned = scanf("%ld", &choice);
-    if ((numberOfItemsScanned == 1) && (choice >= firstValidChoice) && (choice <= maxValidChoice)) {
-        return choice;
+    while (numberOfItemsScanned != 1 || (choice < minValidChoice || choice > maxValidChoice)) {
+        NSLog(@"%@", prompt);
+        fpurge(stdin);
+        numberOfItemsScanned = scanf("%ld", &choice);
     }
     
-    return -1;
+    return choice;
 }
 
 @end
