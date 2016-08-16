@@ -20,7 +20,10 @@ NSString* getStringFromUser(int strLength, NSString *prompt) {
         result = fgets(str, strLength, stdin);
     }
     
-    return @(str);
+    NSString *rtn = @(str);
+    free(str);
+    
+    return rtn;
 }
 
 NSInteger getNumberFromUser(int maxValidChoice, NSString *prompt) {

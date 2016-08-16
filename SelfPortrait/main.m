@@ -22,7 +22,7 @@ int main(int argc, const char * argv[]) {
         while (addingInterests) {
             
             for (int i = 0; i < 3; i++) {
-                [p addInterest:getStringFromUser(30, @"Enter a hobby, passion, or interest.")];
+                [p addInterest:getStringFromUser(30, @"Enter a hobby, passion, or interest. 30 characters or less.")];
             }
             
             if (getNumberFromUser(1, @"Are you done addding things? Enter 0 for yes, 1 for no.") == 0) {
