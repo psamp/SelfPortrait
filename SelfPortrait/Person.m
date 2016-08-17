@@ -11,7 +11,7 @@
 @implementation Person
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"Hello, it's a pleasure to meet you. My name is %@ and I'm %@ years old. I like eating %@, and my interests include: %@", [self name], @([self age]), [self favoriteFood], [self interests]];
+    return [NSString stringWithFormat:@"Hello, it's a pleasure to meet you. My name is %@ and I'm %@ years old. I like eating %@, and my interests include: %@.", [self name], @([self age]), [self favoriteFood], [[self interests] componentsJoinedByString:@", "]];
 }
 
 - (NSString *)name {

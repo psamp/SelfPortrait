@@ -23,7 +23,7 @@ NSString* getStringFromUser(int strLength, NSString *prompt) {
     NSString *rtn = @(str);
     free(str);
     
-    return rtn;
+    return [rtn stringByReplacingOccurrencesOfString:@"\n" withString:@""];
 }
 
 NSInteger getNumberFromUser(int maxValidChoice, NSString *prompt) {
